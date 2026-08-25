@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Christopher Skabich | Portfolio</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Syncopate:wght@400;700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
     <style>
@@ -22,7 +24,7 @@
             --text-sub: #4b5563;
             --font-display: "Syncopate", sans-serif;
             --font-body: "Inter", sans-serif;
-            
+
             /* Keyboard Colors */
             --key-orange: #f97316;
             --key-blue: #3b82f6;
@@ -30,7 +32,7 @@
             --key-purple: #a855f7;
             --key-red: #ef4444;
             --key-dark: #1f2937;
-            --key-side: rgba(0,0,0,0.2);
+            --key-side: rgba(0, 0, 0, 0.2);
         }
 
         /* --- GLOBAL STYLES --- */
@@ -43,10 +45,23 @@
             overflow-x: hidden;
         }
 
-        a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
-        ul { list-style: none; padding: 0; margin: 0; }
-        img { max-width: 100%; display: block; }
-        
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -60,22 +75,23 @@
             align-items: center;
             padding: 30px 0;
         }
-        .logo { 
-            font-family: var(--font-display); 
-            font-weight: 700; 
-            font-size: 1rem; 
-            color: var(--text-main); 
+
+        .logo {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--text-main);
         }
-        
-        .nav-links { 
-            display: flex; 
-            gap: 30px; 
-            font-weight: 600; 
-            font-size: 0.9rem; 
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            font-weight: 600;
+            font-size: 0.9rem;
         }
 
         .nav-links a {
-            --color-hover: #0b1ff5; 
+            --color-hover: #0b1ff5;
             --stop-hover: 0%;
             position: relative;
             cursor: pointer;
@@ -85,16 +101,25 @@
             background-clip: text;
             color: var(--text-sub);
         }
-        .nav-links a:nth-child(1) { --color-hover: #ef4444; }
-        .nav-links a:nth-child(2) { --color-hover: #0b1ff5; }
-        .nav-links a:nth-child(3) { --color-hover: #10b981; }
+
+        .nav-links a:nth-child(1) {
+            --color-hover: #ef4444;
+        }
+
+        .nav-links a:nth-child(2) {
+            --color-hover: #0b1ff5;
+        }
+
+        .nav-links a:nth-child(3) {
+            --color-hover: #10b981;
+        }
 
 
         /* --- HERO SECTION --- */
         .hero {
             min-height: 85vh;
             display: grid;
-            grid-template-columns: 1fr 1fr; 
+            grid-template-columns: 1fr 1fr;
             align-items: center;
             gap: 50px;
         }
@@ -113,32 +138,41 @@
             --stop-active: 0%;
 
             font-family: var(--font-display);
-            font-size: clamp(2.5rem, 5vw, 4rem); 
+            font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 700;
             line-height: 1.1;
             text-transform: uppercase;
             cursor: default;
-            
-            background: linear-gradient(
-                90deg,
-                var(--color-hover) var(--stop-hover),
-                var(--color-active) var(--stop-hover),
-                var(--color-active) var(--stop-active),
-                var(--text-inactive) var(--stop-active)
-            );
-            
+
+            background: linear-gradient(90deg,
+                    var(--color-hover) var(--stop-hover),
+                    var(--color-active) var(--stop-hover),
+                    var(--color-active) var(--stop-active),
+                    var(--text-inactive) var(--stop-active));
+
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            
+
             width: fit-content;
             transition: transform 0.48s cubic-bezier(0.475, 0.425, 0, 0.995);
         }
 
-        .hero-list li:hover { transform: translateX(15px); }
-        .hero-list li:nth-child(1) { --color-hover: #ef4444; }
-        .hero-list li:nth-child(2) { --color-hover: #0b1ff5; }
-        .hero-list li:nth-child(3) { --color-hover: #10b981; }
+        .hero-list li:hover {
+            transform: translateX(15px);
+        }
+
+        .hero-list li:nth-child(1) {
+            --color-hover: #ef4444;
+        }
+
+        .hero-list li:nth-child(2) {
+            --color-hover: #0b1ff5;
+        }
+
+        .hero-list li:nth-child(3) {
+            --color-hover: #10b981;
+        }
 
         .hero-intro {
             margin-top: 30px;
@@ -157,34 +191,43 @@
             border-radius: 50px;
             font-weight: 700;
         }
-        .btn:hover { background: var(--text-main); color: #fff; }
+
+        .btn:hover {
+            background: var(--text-main);
+            color: #fff;
+        }
 
         /* --- 3D KEYBOARD --- */
         .hero-visual {
             display: flex;
             justify-content: center;
             align-items: center;
-            perspective: 1500px; /* Deepened to accommodate the larger object */
+            perspective: 1500px;
+            /* Deepened to accommodate the larger object */
         }
 
         .keyboard-base {
             background: #222;
-            padding: 25px; /* Increased padding */
+            padding: 25px;
+            /* Increased padding */
             border-radius: 24px;
             transform: rotateX(50deg) rotateZ(320deg);
-            box-shadow: 30px 30px 60px rgba(0,0,0,0.3), -5px -5px 20px rgba(255,255,255,0.1);
+            box-shadow: 30px 30px 60px rgba(0, 0, 0, 0.3), -5px -5px 20px rgba(255, 255, 255, 0.1);
             transition: transform 0.5s ease;
         }
 
         .keyboard-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 18px; /* Wider gaps */
+            gap: 18px;
+            /* Wider gaps */
         }
 
         .key {
-            width: 85px; /* Increased from 60px */
-            height: 85px; /* Increased from 60px */
+            width: 85px;
+            /* Increased from 60px */
+            height: 85px;
+            /* Increased from 60px */
             position: relative;
             transform-style: preserve-3d;
             transition: transform 0.2s ease;
@@ -192,7 +235,7 @@
         }
 
         .key:hover {
-            transform: translateZ(20px); 
+            transform: translateZ(20px);
         }
 
         /* Top Face of Key */
@@ -205,53 +248,98 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 36px; /* Larger icons */
+            font-size: 36px;
+            /* Larger icons */
             color: white;
-            transform: translateZ(16px); /* Scaled depth */
+            transform: translateZ(16px);
+            /* Scaled depth */
         }
 
         /* 3D Sides */
         .key::before {
-            content: ''; position: absolute;
-            width: 100%; height: 16px; /* Scaled depth */
-            bottom: 0; left: 0;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 16px;
+            /* Scaled depth */
+            bottom: 0;
+            left: 0;
             background: var(--key-side);
-            transform: rotateX(-90deg) translateZ(85px); /* Matches new key size */
+            transform: rotateX(-90deg) translateZ(85px);
+            /* Matches new key size */
             transform-origin: bottom;
             border-radius: 0 0 10px 10px;
             filter: brightness(0.7);
         }
+
         .key::after {
-            content: ''; position: absolute;
-            width: 16px; height: 100%; /* Scaled depth */
-            right: 0; top: 0;
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 100%;
+            /* Scaled depth */
+            right: 0;
+            top: 0;
             background: var(--key-side);
-            transform: rotateY(90deg) translateZ(-69px); /* Math: 85px - 16px = 69px */
+            transform: rotateY(90deg) translateZ(-69px);
+            /* Math: 85px - 16px = 69px */
             transform-origin: right;
             border-radius: 0 10px 10px 0;
             filter: brightness(0.5);
         }
 
         /* Key Colors */
-        .k-orange .key-top { background: var(--key-orange); }
-        .k-orange::before, .k-orange::after { background: var(--key-orange); }
+        .k-orange .key-top {
+            background: var(--key-orange);
+        }
 
-        .k-blue .key-top { background: var(--key-blue); }
-        .k-blue::before, .k-blue::after { background: var(--key-blue); }
+        .k-orange::before,
+        .k-orange::after {
+            background: var(--key-orange);
+        }
 
-        .k-green .key-top { background: var(--key-green); }
-        .k-green::before, .k-green::after { background: var(--key-green); }
+        .k-blue .key-top {
+            background: var(--key-blue);
+        }
 
-        .k-purple .key-top { background: var(--key-purple); }
-        .k-purple::before, .k-purple::after { background: var(--key-purple); }
+        .k-blue::before,
+        .k-blue::after {
+            background: var(--key-blue);
+        }
 
-        .k-red .key-top { background: var(--key-red); }
-        .k-red::before, .k-red::after { background: var(--key-red); }
+        .k-green .key-top {
+            background: var(--key-green);
+        }
+
+        .k-green::before,
+        .k-green::after {
+            background: var(--key-green);
+        }
+
+        .k-purple .key-top {
+            background: var(--key-purple);
+        }
+
+        .k-purple::before,
+        .k-purple::after {
+            background: var(--key-purple);
+        }
+
+        .k-red .key-top {
+            background: var(--key-red);
+        }
+
+        .k-red::before,
+        .k-red::after {
+            background: var(--key-red);
+        }
 
 
         /* --- PROJECTS GRID --- */
-        section { padding: 80px 0; }
-        
+        section {
+            padding: 80px 0;
+        }
+
         .section-title {
             font-family: var(--font-display);
             color: var(--text-main);
@@ -260,13 +348,13 @@
             border-bottom: 2px solid #f3f4f6;
             padding-bottom: 20px;
         }
-        
+
         .project-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
         }
-        
+
         .project-card {
             border: 1px solid #e5e7eb;
             border-radius: 12px;
@@ -274,34 +362,54 @@
             background: #f9fafb;
             transition: 0.3s;
         }
-        .project-card:hover { 
-            border-color: var(--text-main); 
-            transform: translateY(-5px); 
+
+        .project-card:hover {
+            border-color: var(--text-main);
+            transform: translateY(-5px);
             background: #fff;
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
         }
-        .project-card h3 { margin-top: 0; font-family: var(--font-display); color: var(--text-main);}
-        .project-card p { color: var(--text-sub); }
-        .project-link { 
-            color: var(--text-main); 
-            font-weight: 700; 
-            font-size: 0.9rem; 
-            margin-top: 15px; 
+
+        .project-card h3 {
+            margin-top: 0;
+            font-family: var(--font-display);
+            color: var(--text-main);
+        }
+
+        .project-card p {
+            color: var(--text-sub);
+        }
+
+        .project-link {
+            color: var(--text-main);
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-top: 15px;
             display: block;
         }
 
         /* --- ABOUT SECTION --- */
         .about-layout {
             display: grid;
-            grid-template-columns: 1fr 1.5fr; 
+            grid-template-columns: 1fr 1.5fr;
             gap: 50px;
             align-items: start;
         }
 
-        .about-image img { width: 100%; border-radius: 12px; }
+        .about-image img {
+            width: 100%;
+            border-radius: 12px;
+        }
 
-        .about-content { color: var(--text-sub); line-height: 1.7; }
-        .about-content p { margin-top: 0; margin-bottom: 25px; }
+        .about-content {
+            color: var(--text-sub);
+            line-height: 1.7;
+        }
+
+        .about-content p {
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
 
         .about-stats {
             display: grid;
@@ -311,32 +419,72 @@
             padding-top: 30px;
             border-top: 1px solid #e5e7eb;
         }
-        .stat-item h4 { margin: 0; font-family: var(--font-display); color: var(--text-main); font-size: 1rem; }
-        .stat-item p { margin: 5px 0 0 0; font-size: 0.85rem; }
+
+        .stat-item h4 {
+            margin: 0;
+            font-family: var(--font-display);
+            color: var(--text-main);
+            font-size: 1rem;
+        }
+
+        .stat-item p {
+            margin: 5px 0 0 0;
+            font-size: 0.85rem;
+        }
 
         /* --- CONTACT & FOOTER --- */
-        .contact { margin: 50px 0 100px 0; text-align: center; color: var(--text-main);}
-        footer { 
-            text-align: center; padding: 50px 0; 
-            color: #9ca3af; font-size: 0.8rem; border-top: 1px solid #f3f4f6; 
+        .contact {
+            margin: 50px 0 100px 0;
+            text-align: center;
+            color: var(--text-main);
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px 0;
+            color: #9ca3af;
+            font-size: 0.8rem;
+            border-top: 1px solid #f3f4f6;
         }
 
         /* --- MOBILE RESPONSIVE --- */
         @media (max-width: 600px) {
-            .keyboard-base { padding: 15px; }
-            .keyboard-grid { gap: 10px; }
-            .key { width: 55px; height: 55px; }
-            .key-top { font-size: 24px; transform: translateZ(12px); }
-            .key::before { height: 12px; transform: rotateX(-90deg) translateZ(55px); }
-            .key::after { width: 12px; transform: rotateY(90deg) translateZ(-43px); }
+            .keyboard-base {
+                padding: 15px;
+            }
+
+            .keyboard-grid {
+                gap: 10px;
+            }
+
+            .key {
+                width: 55px;
+                height: 55px;
+            }
+
+            .key-top {
+                font-size: 24px;
+                transform: translateZ(12px);
+            }
+
+            .key::before {
+                height: 12px;
+                transform: rotateX(-90deg) translateZ(55px);
+            }
+
+            .key::after {
+                width: 12px;
+                transform: rotateY(90deg) translateZ(-43px);
+            }
         }
     </style>
 </head>
+
 <body>
 
     <div class="container">
         <nav>
-            <div class="logo">Christopher Skabich</div> 
+            <div class="logo">Christopher Skabich</div>
             <div class="nav-links">
                 <a href="#work">Work</a>
                 <a href="#about">About</a>
@@ -345,7 +493,7 @@
         </nav>
 
         <section class="hero">
-            
+
             <div class="hero-text">
                 <ul class="hero-list">
                     <li>Welcome</li>
@@ -354,7 +502,8 @@
                 </ul>
 
                 <div class="hero-intro">
-                    <p>Computer Science graduate based in Cedar Grove, NJ. Building systems, analyzing data, and creating interactive web experiences.</p>
+                    <p>Computer Science graduate based in Cedar Grove, NJ. Building systems, analyzing data, and
+                        creating interactive web experiences.</p>
                     <a href="#contact" class="btn">Get in Touch</a>
                 </div>
             </div>
@@ -362,26 +511,58 @@
             <div class="hero-visual">
                 <div class="keyboard-base">
                     <div class="keyboard-grid">
-                        
-                        <div class="key k-orange"><div class="key-top"><i class="fab fa-html5"></i></div></div>
-                        <div class="key k-blue"><div class="key-top"><i class="fab fa-css3-alt"></i></div></div>
-                        <div class="key k-green"><div class="key-top"><i class="fab fa-js"></i></div></div>
-                        <div class="key k-red"><div class="key-top"><i class="fab fa-java"></i></div></div>
 
-                        <div class="key k-purple"><div class="key-top"><i class="fab fa-python"></i></div></div>
-                        <div class="key k-green"><div class="key-top"><i class="fab fa-r-project"></i></div></div>
-                        <div class="key k-red"><div class="key-top"><i class="fas fa-database"></i></div></div>
-                        <div class="key k-blue"><div class="key-top"><i class="fab fa-aws"></i></div></div>
+                        <div class="key k-orange">
+                            <div class="key-top"><i class="fab fa-html5"></i></div>
+                        </div>
+                        <div class="key k-blue">
+                            <div class="key-top"><i class="fab fa-css3-alt"></i></div>
+                        </div>
+                        <div class="key k-green">
+                            <div class="key-top"><i class="fab fa-js"></i></div>
+                        </div>
+                        <div class="key k-red">
+                            <div class="key-top"><i class="fab fa-java"></i></div>
+                        </div>
 
-                        <div class="key k-blue"><div class="key-top"><i class="fab fa-git"></i></div></div>
-                        <div class="key k-purple"><div class="key-top"><i class="fab fa-github"></i></div></div>
-                        <div class="key k-orange"><div class="key-top"><i class="fab fa-gitlab"></i></div></div>
-                        <div class="key k-green"><div class="key-top"><i class="fab fa-bitbucket"></i></div></div>
-                        
-                        <div class="key k-green"><div class="key-top"><i class="fab fa-atlassian"></i></div></div>
-                        <div class="key k-red"><div class="key-top"><i class="fab fa-jira"></i></div></div>
-                        <div class="key k-blue"><div class="key-top"><i class="fab fa-microsoft"></i></div></div>
-                        <div class="key k-orange"><div class="key-top"><i class="fab fa-apple"></i></div></div>
+                        <div class="key k-purple">
+                            <div class="key-top"><i class="fab fa-python"></i></div>
+                        </div>
+                        <div class="key k-green">
+                            <div class="key-top"><i class="fab fa-r-project"></i></div>
+                        </div>
+                        <div class="key k-red">
+                            <div class="key-top"><i class="fas fa-database"></i></div>
+                        </div>
+                        <div class="key k-blue">
+                            <div class="key-top"><i class="fab fa-aws"></i></div>
+                        </div>
+
+                        <div class="key k-blue">
+                            <div class="key-top"><i class="fab fa-git"></i></div>
+                        </div>
+                        <div class="key k-purple">
+                            <div class="key-top"><i class="fab fa-github"></i></div>
+                        </div>
+                        <div class="key k-orange">
+                            <div class="key-top"><i class="fab fa-gitlab"></i></div>
+                        </div>
+                        <div class="key k-green">
+                            <div class="key-top"><i class="fab fa-bitbucket"></i></div>
+                        </div>
+
+                        <div class="key k-green">
+                            <div class="key-top"><i class="fab fa-atlassian"></i></div>
+                        </div>
+                        <div class="key k-red">
+                            <div class="key-top"><i class="fab fa-jira"></i></div>
+                        </div>
+                        <div class="key k-blue">
+                            <div class="key-top"><i class="fab fa-microsoft"></i></div>
+                        </div>
+                        <div class="key k-orange">
+                            <div class="key-top"><i class="fab fa-apple"></i></div>
+                        </div>
 
 
 
@@ -394,23 +575,35 @@
         <section id="work">
             <h2 class="section-title">Selected Works</h2>
             <div class="project-grid">
-                
+
                 <div class="project-card">
                     <h3>Weather and Air Quality Dashboard</h3>
-                    <p>An air quality and weather dashboard built for Lehigh's newspaper, <em>The Brown & White</em>. Focuses on the weather and air quality on campus.</p>
-                    <a href="https://gisweb.cc.lehigh.edu/bw_app/" class="project-link" target="_blank">VIEW PROJECT →</a>
+                    <p>An air quality and weather dashboard built for Lehigh's newspaper, <em>The Brown & White</em>.
+                        Focuses on the weather and air quality on campus.</p>
+                    <a href="https://gisweb.cc.lehigh.edu/bw_app/" class="project-link" target="_blank">VIEW PROJECT
+                        →</a>
                 </div>
-                
+
                 <div class="project-card">
                     <h3>Lehigh CSE 216 Software Engineering Project</h3>
-                    <p>A semester long group project that follows the Agile Methodology. A cloud-hosted web application so that employees can post short ideas.</p>
+                    <p>A semester long group project that follows the Agile Methodology. A cloud-hosted web application
+                        so that employees can post short ideas.</p>
                     <a href="cse216_project.html" class="project-link" target="_blank">VIEW PROJECT DETAILS →</a>
                 </div>
-                
+
                 <div class="project-card">
                     <h3>Email Phishing Dashboard</h3>
-                    <p>A security awareness tool designed to deploy, track, and analyze simulated phishing campaigns to educate internal stakeholders.</p>
+                    <p>A security awareness tool designed to deploy, track, and analyze simulated phishing campaigns to
+                        educate internal stakeholders.</p>
                     <a href="phishing-project.html" class="project-link">VIEW PROJECT DETAILS →</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Bulkhead Company Chatbot (In Progress)</h3>
+                    <p>The Bulkhead After-Hours Lead Bot is a 24/7 website assistant for marine construction companies
+                        that automatically captures and qualifies leads outside business hours to prep a sales team.</p>
+                    <a href="https://github.com/Chris-Skabich/bulkhead-chatbot" class="project-link">VIEW PROJECT GITHUB
+                        →</a>
                 </div>
             </div>
         </section>
@@ -418,20 +611,25 @@
         <section id="about">
             <h2 class="section-title">About Me</h2>
             <div class="about-layout">
-                
+
                 <div class="about-image">
-                    <img src="Headshot.png" alt="Christopher Skabich">                
+                    <img src="Headshot.png" alt="Christopher Skabich">
                 </div>
                 <div class="about-content">
-                    <p>
-                        I am a Lehigh University Computer Science graduate (Class of '26) with a passion for software engineering, cybersecurity, and cloud computing. I specialize in bridging the gap between complex backend data and clear, user-friendly frontend visualizations.
-                    </p>
-                    <p>
-                        As an IT Intern at the <strong>Port Authority of NY & NJ</strong>, I developed procurement web portals, organized enterprise server configurations, and built cybersecurity monitoring dashboards. My role as the Data Editor for <em>The Brown & White</em> further honed my ability to translate technical requirements into engaging, interactive reporting for a broad audience.
-                    </p>
-                    <p>
-                        Beyond coding, I strongly emphasize clean documentation, process improvement, and agile project management. I actively leverage tools like <strong>Atlassian Jira</strong> to manage development sprints, collaborate with cross-functional teams, and ensure operational continuity from end to end.
-                    </p>
+                    <p>I am a Lehigh University Computer Science graduate ('26) specializing in software engineering,
+                        cybersecurity, and cloud computing. My expertise lies in translating complex backend data into
+                        intuitive, user-friendly frontend experiences.</p>
+
+                    <p>Currently, I serve as a <strong>Technician at JCT Solutions</strong>, conducting on-site hardware
+                        troubleshooting and systems maintenance, and as a <strong>Contract Developer for the Center for
+                            Cognition, Emotion, and Behavior</strong>, building web applications for research.
+                        Previously, as an <strong>Aviation Technology Intern at the Port Authority of NY & NJ</strong>,
+                        I built procurement portals and cybersecurity dashboards, and as <strong>Data Editor</strong>
+                        for <em>The Brown & White</em>, I created interactive data reports.</p>
+
+                    <p>Across all my roles, I emphasize agile project management, clean documentation, and process
+                        improvement. Leveraging tools like <strong>Atlassian Jira</strong>, I thrive on cross-functional
+                        teams to deliver secure, scalable, and user-focused digital solutions.</p>
 
                     <div class="about-stats">
                         <div class="stat-item">
@@ -463,7 +661,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            
+
             // --- 1. HERO TEXT ANIMATION ---
             const heroItems = document.querySelectorAll(".hero-list li");
             gsap.set(heroItems, { "--stop-hover": "0%", "--stop-active": "0%" });
@@ -475,10 +673,10 @@
             introTimeline
                 .to(heroItems, { "--stop-active": "100%", stagger: 0.1 })
                 .to(heroItems, { "--stop-hover": "100%", stagger: 0.1 }, "-=0.5")
-                .to(heroItems, { 
-                    "--stop-hover": "0%", 
+                .to(heroItems, {
+                    "--stop-hover": "0%",
                     "--stop-active": "0%",
-                    stagger: { each: 0.1, from: "end" } 
+                    stagger: { each: 0.1, from: "end" }
                 }, "+=0.2");
 
             heroItems.forEach((item) => {
@@ -493,7 +691,7 @@
             // --- 2. KEYBOARD FLOAT ANIMATION ---
             gsap.to(".keyboard-base", {
                 y: -15,
-                rotationX: 58, 
+                rotationX: 58,
                 duration: 3,
                 yoyo: true,
                 repeat: -1,
@@ -502,7 +700,7 @@
 
             // --- 3. KEY STAGGER ENTRANCE ---
             gsap.from(".key", {
-                z: -300, 
+                z: -300,
                 opacity: 0,
                 duration: 1.2,
                 stagger: {
@@ -516,4 +714,5 @@
         });
     </script>
 </body>
+
 </html>
